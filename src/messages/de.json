@@ -1,0 +1,112 @@
+{
+  "IndexPage": {
+    "title": "nächstes-intl-beispiel",
+    "description": "Dies ist ein einfaches Beispiel, das die Verwendung von <code>next-intl</code> mit der Next.js-App demonstriert. Versuchen Sie, das Gebietsschema in der oberen rechten Ecke zu ändern, und sehen Sie, wie sich der Inhalt ändert."
+  },
+  "LocaleSwitcher": {
+    "label": "Sprache ändern",
+    "locale": "{locale, select, de { Deutsh } en { English } other { Unbekannt }}"
+  },
+  "LocaleLayout": {
+    "title": "next-intl Beispiel",
+    "description": ""
+  },
+  "Navbar": {
+    "buttonText": "Legen Sie los",
+    "navigation": {
+      "product": "Produkt",
+      "features": "Merkmale",
+      "pricing": "Preise",
+      "company": "Unternehmen",
+      "blog": "Blog"
+    }
+  },
+  "Hero": {
+    "title": "Kostenlose Landingpage-Vorlage für Startups",
+    "description": "Nextly ist eine kostenlose Landingpage- und Marketing-Website-Vorlage für Startups und Indie-Projekte. Es wurde mit Next.js und TailwindCSS erstellt. Und es ist vollständig Open Source.",
+    "button": "Erfahren Sie mehr",
+    "view": "Ansicht auf Github",
+    "info": "Vertrauenswürdig von <span>2000+</span> Kunden weltweit"
+  },
+  "RootPage": {
+    "info": "Vorteile von Nextly",
+    "title": "Warum sollten Sie diese Landingpage nutzen?",
+    "description": "Nextly ist eine kostenlose Landingpage- und Marketing-Website-Vorlage für Startups und Indie-Projekte. Es wurde mit Next.js TailwindCSS erstellt. Und es ist vollständig Open Source.",
+    "sectionTitle": "Sehen Sie sich ein Video an",
+    "sectionDesc": "Erfahren Sie, wie Sie Ihre Bedürfnisse erfüllen können",
+    "sectionInfo": "In diesem Abschnitt möchten wir ein Werbe- oder Demovideo Ihres Produkts hervorheben. Laut Analysten hat eine Landingpage mit Video eine um 3 % höhere Conversion-Rate. Vergessen Sie also nicht, eines hinzuzufügen. Einfach so.",
+    "testTitle": "Erfahrungsberichte",
+    "testDesc": "Das haben unsere Kunden gesagt",
+    "testInfo": "Testimonials sind eine großartige Möglichkeit, das Vertrauen und die Bekanntheit einer Marke zu steigern. Nutzen Sie diesen Abschnitt, um Ihre beliebten Kunden hervorzuheben.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faqDesc": "Beantworten Sie hier mögliche Fragen Ihrer Kunden, dies erhöht die Conversion-Rate sowie Support- oder Chat-Anfragen.",
+    "tryMoreSectionText1": "Sind Sie bereit, diese Vorlage auszuprobieren?",
+    "tryMoreSectionText2": "Lassen Sie Ihre Besucher keine schlechte Landung sehen.",
+    "learnMoreButton": "Erfahren Sie mehr",
+    "footerText": "Nextly ist eine kostenlose Landingpage- und Marketing-Website-Vorlage für Startups und Indie-Projekte. Es wurde mit Next.js und TailwindCSS erstellt. Und es ist vollständig Open Source.",
+    "navigation": {
+      "product": "Produkt",
+      "features": "Merkmale",
+      "pricing": "Preise",
+      "company": "Unternehmen",
+      "blog": "Blog"
+    },
+    "legal": {
+      "terms": "Bedingungen",
+      "privacy": "Privatsphäre",
+      "legal": "Legal"
+    },
+    "follow": "Folgen Sie uns"
+  },
+  "Data": {
+    "title": "Heben Sie Ihre Vorteile hervor",
+    "desc": "Sie können diesen Bereich nutzen, um Ihren ersten Vorteil oder eine Funktion Ihres Produkts hervorzuheben. Es kann auch ein Bild oder eine Illustration wie im Beispiel sowie einige Aufzählungspunkte enthalten.",
+    "image": "benefitOneImg",
+    "imgPos": "left",
+    "bullets": {
+      "point1": {
+        "title": "Verstehen Sie Ihre Kunden",
+        "desc": "Erklären Sie dann den ersten Punkt kurz in ein oder zwei Zeilen.",
+        "icon": "FaceSmileIcon"
+      },
+      "point2": {
+        "title": "Akquise verbessern",
+        "desc": "Hier können Sie den nächsten Vorteilspunkt hinzufügen.",
+        "icon": "ChartBarSquareIcon"
+      },
+      "point3": {
+        "title": "Steigern Sie die Kundenbindung",
+        "desc": "Dies ist Ihr letzter Aufzählungspunkt in diesem Abschnitt.",
+        "icon": "CursorArrowRaysIcon"
+      }
+    }
+  },
+  "FAQ": {
+    "questions": {
+      "pt1": {
+        "question": "Ist die Nutzung dieser Vorlage völlig kostenlos?",
+        "answer": "Ja, die Nutzung dieser Vorlage ist völlig kostenlos."
+      },
+      "pt2": {
+        "question": "Kann ich es in einem kommerziellen Projekt verwenden?",
+        "answer": "Ja, das können Sie."
+      },
+      "pt3": {
+        "question": "Wie lauten Ihre Rückerstattungsrichtlinien?",
+        "answer": "Wenn Sie aus irgendeinem Grund mit Ihrem Kauf unzufrieden sind, senden Sie uns innerhalb von 90 Tagen eine E-Mail und wir erstatten Ihnen den vollen Betrag zurück, ohne dass Fragen gestellt werden."
+      },
+      "pt4": {
+        "question": "Bieten Sie technischen Support an?",
+        "answer": "Nein, wir bieten keinen technischen Support für kostenlose Downloads an. Bitte erwerben Sie einen Supportplan, um 6 Monate Support zu erhalten."
+      }
+    }
+  },
+  "Testimonials": {
+    "test1": "Teilen Sie ein echtes <Mark>testimonial</Mark>, das einige Ihrer Vorteile von einem Ihrer beliebten Kunden aufzeigt.",
+    "test2": "Stellen Sie sicher, dass Sie nur den <Mark>richtigen Satz</Mark> auswählen, um ihn kurz und einfach zu halten.",
+    "test3": "Dies ist eine <Mark>fantastische</Mark> Landingpage-Vorlage, die ich gesehen habe. Ich würde es für alles verwenden.",
+    "test1Info": "VP Sales bei Google",
+    "test2Info": "Leitender Vermarkter bei Netflix",
+    "test3Info": "Mitbegründer von Acme Inc"
+  }
+}
