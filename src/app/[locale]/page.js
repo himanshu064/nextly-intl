@@ -9,8 +9,12 @@ import { Cta } from "@/components/Cta";
 
 import { benefitOne, benefitTwo } from "@/components/data";
 import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
-export default function Home() {
+export default function Home({ params }) {
+  const { locale } = params;
+  setRequestLocale(locale);
+
   const t = useTranslations("RootPage");
 
   return (

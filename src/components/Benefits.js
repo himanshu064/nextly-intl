@@ -14,7 +14,9 @@ export const Benefits = ({ data, imgPos }) => {
     FaceSmileIcon: <FaceSmileIcon />,
     ChartBarSquareIcon: <ChartBarSquareIcon />,
     CursorArrowRaysIcon: <CursorArrowRaysIcon />,
-    benefitOneImg: <img src={benefitOneImg.src} alt="Benefit" />,
+    benefitOneImg: (
+      <Image src={benefitOneImg.src} alt="Benefit" width={200} height={200} />
+    ),
   };
 
   const t = useTranslations("Data");
