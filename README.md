@@ -4,7 +4,7 @@ Welcome to the Nextly-Intl, a project built with the Next.js 14 App Router. This
 
 ## Preview
 
-The live version of this project is deployed and accessible [here](https://react-horizon-ui.vercel.app/).
+The live version of this project is deployed and accessible [here](https://nextly-intl.vercel.app/).
 
 ## Technologies Used
 
