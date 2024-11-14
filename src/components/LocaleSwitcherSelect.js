@@ -1,17 +1,30 @@
 "use client";
+import { getLocaleFromCookie } from "@/lib/cookieUtls";
 import { usePathname, useRouter } from "@/navigation";
-import React, { useTransition } from "react";
+import React, { useEffect, useState, useTransition } from "react";
 
-const LocaleSwitcherSelect = ({ children, defaultValue }) => {
+const LocaleSwitcherSelect = ({ children }) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+  const [selectedLocale, setSelectedLocale] = useState("en");
   const pathname = usePathname();
 
-  function onSelectChange(event) {
-    const selectedLocale = event.target.value;
+  useEffect(() => {
+    // Fetch the initial locale from the cookie when the component mounts
+    const fetchLocale = async () => {
+      const locale = await getLocaleFromCookie();
+      setSelectedLocale(locale);
+    };
+    fetchLocale();
+  }, []);
 
+  function onSelectChange(event) {
+    const newLocale = event.target.value;
+    setSelectedLocale(newLocale); // Update the state with the new locale
+
+    // Set the cookie on the client side
     if (document !== undefined) {
-      document.cookie = `locale=${selectedLocale}; path=/; max-age=31536000`;
+      document.cookie = `locale=${newLocale}; path=/; max-age=31536000`;
     }
 
     startTransition(() => {
@@ -20,6 +33,8 @@ const LocaleSwitcherSelect = ({ children, defaultValue }) => {
     });
   }
 
+  console.log(selectedLocale, "selectedLocale");
+
   return (
     <div className="relative inline-block w-full">
       <select
@@ -27,7 +42,7 @@ const LocaleSwitcherSelect = ({ children, defaultValue }) => {
         className={`block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out ${
           isPending ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
         }`}
-        defaultValue={defaultValue}
+        value={selectedLocale} // Use value instead of defaultValue
         disabled={isPending}
         onChange={onSelectChange}
       >
