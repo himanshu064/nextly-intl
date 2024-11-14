@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -9,12 +10,8 @@ import { Cta } from "@/components/Cta";
 
 import { benefitOne, benefitTwo } from "@/components/data";
 import { useTranslations } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
 
-export default function Home({ params }) {
-  const { locale } = params;
-  setRequestLocale(locale);
-
+export default function Home() {
   const t = useTranslations("RootPage");
 
   return (

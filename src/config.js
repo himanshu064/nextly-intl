@@ -5,4 +5,6 @@ export const pathnames = {
   pathnames: "/pathnames",
 };
 
-export const localePrefix = "always";
+export const defaultLocale = "en";
+
+export const localePrefix = "never";

@@ -1,25 +1,27 @@
 "use client";
 import { usePathname, useRouter } from "@/navigation";
-import { useParams } from "next/navigation";
 import React, { useTransition } from "react";
 
-const LocaleSwitcherSelect = ({ children, defaultValue, label }) => {
+const LocaleSwitcherSelect = ({ children, defaultValue }) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
 
   function onSelectChange(event) {
-    const nextLocale = event.target.value;
+    const selectedLocale = event.target.value;
+
+    if (document !== undefined) {
+      document.cookie = `locale=${selectedLocale}; path=/; max-age=31536000`;
+    }
+
     startTransition(() => {
-      router.push(pathname, { locale: nextLocale });
+      router.push(pathname);
+      router.refresh();
     });
   }
 
   return (
     <div className="relative inline-block w-full">
-      {/* <label className="block text-gray-600 mb-2" htmlFor="locale-select">
-        {label}
-      </label> */}
       <select
         id="locale-select"
         className={`block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out ${

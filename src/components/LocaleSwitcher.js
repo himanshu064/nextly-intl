@@ -1,12 +1,13 @@
-// "use client";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import React from "react";
 import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
 import { locales } from "@/config";
+import { getLocaleFromCookie } from "@/lib/cookieUtls";
 
 const LocaleSwitcher = () => {
   const t = useTranslations("LocaleSwitcher");
-  const locale = useLocale();
+  const locale = getLocaleFromCookie() || "en";
+
   return (
     <LocaleSwitcherSelect defaultValue={locale} label={t("label")}>
       {locales?.map((curr) => (
