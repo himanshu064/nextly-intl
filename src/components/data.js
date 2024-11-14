@@ -31,7 +31,7 @@ const benefitOne = {
       icon: <CursorArrowRaysIcon />,
     },
   ],
-};  
+};
 
 const benefitTwo = {
   title: "Offer more benefits here",

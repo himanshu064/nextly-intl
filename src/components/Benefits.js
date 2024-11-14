@@ -1,28 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Container } from "@/components/Container";
-import {
-  FaceSmileIcon,
-  ChartBarSquareIcon,
-  CursorArrowRaysIcon,
-} from "@heroicons/react/24/solid";
-import { useTranslations } from "next-intl";
-import benefitOneImg from "../../public/benefit-one.png";
 
 export const Benefits = ({ data, imgPos }) => {
-  const iconMap = {
-    FaceSmileIcon: <FaceSmileIcon />,
-    ChartBarSquareIcon: <ChartBarSquareIcon />,
-    CursorArrowRaysIcon: <CursorArrowRaysIcon />,
-    benefitOneImg: (
-      <Image src={benefitOneImg.src} alt="Benefit" width={200} height={200} />
-    ),
-  };
-
-  const t = useTranslations("Data");
-
-  const bulletKeys = ["point1", "point2", "point3"];
-
   return (
     <Container className="flex flex-wrap mb-20 lg:gap-10 lg:flex-nowrap ">
       <div
@@ -51,31 +31,22 @@ export const Benefits = ({ data, imgPos }) => {
         <div>
           <div className="flex flex-col w-full mt-4">
             <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
-              {t("title")}
+              Highlight your benefits
             </h3>
 
             <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-              {t("desc")}
+              You can use this space to highlight your first benefit or a
+              feature of your product. It can also contain an image or
+              Illustration like in the example along with some bullet points.
             </p>
           </div>
 
           <div className="w-full mt-5">
-            {bulletKeys.map((key) => {
-              const title = t(`bullets.${key}.title`);
-              const desc = t(`bullets.${key}.desc`);
-              const iconName = t(`bullets.${key}.icon`);
-              const icon = iconMap[iconName];
-
-              if (!icon) {
-                return null;
-              }
-
-              return (
-                <Benefit key={key} title={title} icon={icon}>
-                  {desc}
-                </Benefit>
-              );
-            })}
+            {data.bullets.map((item, index) => (
+              <Benefit key={index} title={item.title} icon={item.icon}>
+                {item.desc}
+              </Benefit>
+            ))}
           </div>
         </div>
       </div>

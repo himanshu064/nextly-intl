@@ -4,19 +4,22 @@ import ThemeChanger from "./DarkSwitch";
 import Image from "next/image";
 import { Disclosure } from "@headlessui/react";
 import Logo from "../../public/logo.svg";
-import LocaleSwitcher from "./LocaleSwitcher";
-import { useTranslations } from "next-intl";
+import { useEffect } from "react";
+const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
 
 export const Navbar = () => {
-  const t = useTranslations("Navbar");
+  useEffect(() => {
+    setTimeout(() => {
+      if (typeof document !== undefined) {
+        const text = document.querySelector(".skiptranslate.goog-te-gadget")
+          ?.childNodes[1];
 
-  const navigation = [
-    t("navigation.product"),
-    t("navigation.features"),
-    t("navigation.pricing"),
-    t("navigation.company"),
-    t("navigation.blog"),
-  ];
+        if (text) {
+          text.textContent = "";
+        }
+      }
+    }, 200);
+  }, []);
 
   return (
     <div className="w-full">
@@ -45,7 +48,7 @@ export const Navbar = () => {
               href="/"
               className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
             >
-              {t("buttonText")}
+              Get Started
             </Link>
           </div>
         </div>
@@ -78,7 +81,7 @@ export const Navbar = () => {
                 </svg>
               </Disclosure.Button>
 
-              <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
+              <Disclosure.Panel className="flex-wrap w-full my-5 md:flex hidden">
                 <>
                   {navigation.map((item, index) => (
                     <Link
@@ -99,6 +102,7 @@ export const Navbar = () => {
               </Disclosure.Panel>
             </>
           )}
+          <div id="google_translate_element" />
         </Disclosure>
 
         {/* menu  */}
@@ -114,7 +118,6 @@ export const Navbar = () => {
                 </Link>
               </li>
             ))}
-            <LocaleSwitcher />
           </ul>
         </div>
       </nav>

@@ -8,7 +8,7 @@ const LocaleSwitcher = () => {
   const t = useTranslations("LocaleSwitcher");
   const locale = useLocale();
   return (
-    <LocaleSwitcherSelect defaultValue={locale} label={t("label")}>
+    <LocaleSwitcherSelect defaultValue={locale} label="Change language">
       {locales?.map((curr) => (
         <option key={curr} value={curr}>
           {t("locale", { locale: curr })}
