@@ -8,3 +8,27 @@
     @apply dark:bg-trueGray-900;
   }
 }
+
+body {
+  top: 0px !important;
+}
+
+.skiptranslate > iframe {
+  display: none;
+  visibility: hidden !important;
+}
+
+.skiptranslate.goog-te-gadget > span {
+  display: none !important;
+}
+
+.skiptranslate.goog-te-gadget > div > select {
+  margin: 5px 10px !important;
+  border: 1px solid #555555 !important;
+  border-radius: 5px !important;
+  padding: 5px 10px !important;
+}
+
+.skiptranslate.goog-te-gadget > div > select:focus {
+  outline: none !important;
+}
