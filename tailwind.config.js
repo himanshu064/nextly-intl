@@ -2,10 +2,6 @@
 // const colors = require("tailwindcss/colors");
 import defaultTheme from "tailwindcss/defaultTheme";
 import colors from "tailwindcss/colors";
-import { createRequire } from 'module';
-
-var require = createRequire(import.meta.url);
-var module = { exports: {} };
 
 const config = {
   mode: "jit",
